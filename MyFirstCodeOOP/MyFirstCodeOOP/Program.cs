@@ -78,7 +78,7 @@ namespace MyFirstCodeOOP
                 isActive = Convert.ToBoolean(Console.ReadLine());
 
                 Console.WriteLine("Enter your commission in percentage:");
-                double commissionPercentage = Convert.ToDouble(Console.ReadLine());
+                float commissionPercentage = Convert.ToSingle(Console.ReadLine());
                 commissionPercentage = commissionEmployee.ConvertPercentage(commissionPercentage);
 
                 Console.WriteLine("Enter your sales:");
@@ -92,7 +92,7 @@ namespace MyFirstCodeOOP
                     BirthDate = new Date(Convert.ToInt32(year), Convert.ToInt32(month), Convert.ToInt32(day)),
                     HiringDate = new Date(2022, 3, 4),
                     IsActive = isActive,
-                    CommissionPercentage = (float)commissionPercentage,
+                    CommissionPercentage = commissionPercentage,
                     Sales = sales,
                 };
 

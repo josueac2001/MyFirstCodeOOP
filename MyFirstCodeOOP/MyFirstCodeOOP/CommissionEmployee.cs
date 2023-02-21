@@ -15,7 +15,7 @@ namespace MyFirstCodeOOP
 
         public override decimal GetValueToPay()
         {
-            return Sales * (decimal)CommissionPercentage;
+            return Sales * (decimal)ConvertPercentage(CommissionPercentage)  ;
         }
 
         public override string ToString()
@@ -26,9 +26,9 @@ namespace MyFirstCodeOOP
                 $"\n\tValue to pay.............{GetValueToPay():C2}";
         }
 
-        public float ConvertPercentage(double commissionPercentageValue)
+        public float ConvertPercentage(float commissionPercentageValue)
         {
-            return (float)(commissionPercentageValue / 100);
+            return (commissionPercentageValue / 100);
         }
         #endregion
     }
