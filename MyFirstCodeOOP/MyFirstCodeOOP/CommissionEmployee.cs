@@ -15,7 +15,7 @@ namespace MyFirstCodeOOP
 
         public override decimal GetValueToPay()
         {
-            return Sales * (decimal)ConvertPercentage(CommissionPercentage)  ;
+            return (Sales * (decimal)ConvertPercentage(CommissionPercentage)) + Sales  ;
         }
 
         public override string ToString()

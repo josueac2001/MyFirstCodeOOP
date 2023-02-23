@@ -58,6 +58,7 @@ namespace MyFirstCodeOOP
                 };
 
                 Console.WriteLine(salaryEmployee);
+                Console.WriteLine(" ");
 
                 Console.WriteLine("***********************");
                 Console.WriteLine("* COMMISSION EMPLOYEE *");
@@ -84,7 +85,7 @@ namespace MyFirstCodeOOP
                 Console.WriteLine("Enter your sales:");
                 decimal sales = Convert.ToDecimal(Console.ReadLine());
 
-                Employee commissionEmployee1 = new CommissionEmployee()
+                Employee commissionEmployee = new CommissionEmployee()
                 {
                     Id = id,
                     FirstName = firstName,
@@ -96,7 +97,8 @@ namespace MyFirstCodeOOP
                     Sales = sales,
                 };
 
-                Console.WriteLine(commissionEmployee1);
+                Console.WriteLine(commissionEmployee);
+
 
             }
             catch (Exception ex)
