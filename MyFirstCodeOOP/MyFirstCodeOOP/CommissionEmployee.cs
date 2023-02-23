@@ -15,13 +15,13 @@ namespace MyFirstCodeOOP
 
         public override decimal GetValueToPay()
         {
-            return (Sales * (decimal)ConvertPercentage(CommissionPercentage)) + Sales  ;
+            return Sales * (decimal)ConvertPercentage(CommissionPercentage) ;
         }
 
         public override string ToString()
         {
             return $"{base.ToString()}" + 
-                $"\n\tCommission Percentage....{CommissionPercentage:P2}" +
+                $"\n\tCommission Percentage....{ConvertPercentage(CommissionPercentage):P2}" +
                 $"\n\tSales....................{Sales:C2}" +
                 $"\n\tValue to pay.............{GetValueToPay():C2}";
         }

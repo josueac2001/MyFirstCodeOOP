@@ -80,12 +80,12 @@ namespace MyFirstCodeOOP
 
                 Console.WriteLine("Enter your commission in percentage:");
                 float commissionPercentage = Convert.ToSingle(Console.ReadLine());
-                commissionPercentage = commissionEmployee.ConvertPercentage(commissionPercentage);
+                
 
                 Console.WriteLine("Enter your sales:");
                 decimal sales = Convert.ToDecimal(Console.ReadLine());
 
-                Employee commissionEmployee = new CommissionEmployee()
+                Employee commissionEmployee1 = new CommissionEmployee()
                 {
                     Id = id,
                     FirstName = firstName,
@@ -97,7 +97,7 @@ namespace MyFirstCodeOOP
                     Sales = sales,
                 };
 
-                Console.WriteLine(commissionEmployee);
+                Console.WriteLine(commissionEmployee1);
 
 
             }
