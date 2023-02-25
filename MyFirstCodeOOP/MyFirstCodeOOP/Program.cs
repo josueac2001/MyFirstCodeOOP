@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MyFirstCodeOOP.Helper;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace MyFirstCodeOOP
 {
@@ -57,7 +60,7 @@ namespace MyFirstCodeOOP
                     Salary = salary,
                 };
 
-                Console.WriteLine(salaryEmployee);
+                // Console.WriteLine(salaryEmployee);
                 Console.WriteLine(" ");
 
                 Console.WriteLine("***********************");
@@ -80,7 +83,7 @@ namespace MyFirstCodeOOP
 
                 Console.WriteLine("Enter your commission in percentage:");
                 float commissionPercentage = Convert.ToSingle(Console.ReadLine());
-                
+
 
                 Console.WriteLine("Enter your sales:");
                 decimal sales = Convert.ToDecimal(Console.ReadLine());
@@ -97,7 +100,7 @@ namespace MyFirstCodeOOP
                     Sales = sales,
                 };
 
-                Console.WriteLine(commissionEmployee1);
+                //Console.WriteLine(commissionEmployee1);
                 Console.WriteLine(" ");
 
                 Console.WriteLine("************************");
@@ -137,7 +140,7 @@ namespace MyFirstCodeOOP
                     HourValue = hourValue,
                 };
 
-                Console.WriteLine(contractorEmployee);
+                //Console.WriteLine(contractorEmployee);
                 Console.WriteLine(" ");
 
                 Console.WriteLine("******************************");
@@ -177,11 +180,13 @@ namespace MyFirstCodeOOP
                     IsActive = isActive,
                     CommissionPercentage = commissionPercentage,
                     Sales = sales,
-                    Base =salaryBase
+                    Base = salaryBase
                 };
 
-                Console.WriteLine(baseComissionEmployee);
+                //Console.WriteLine(baseComissionEmployee);
 
+                EmployeeHelper employeeHelper = new EmployeeHelper(salaryEmployee, commissionEmployee, contractorEmployee,baseComissionEmployee);
+                Console.WriteLine($"Total payroll:........{employeeHelper.GetPayrollFromActiveEmployees():C2}");
 
             }
             catch (Exception ex)
