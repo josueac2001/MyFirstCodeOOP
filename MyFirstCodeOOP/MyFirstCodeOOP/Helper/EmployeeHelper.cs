@@ -14,10 +14,10 @@ namespace MyFirstCodeOOP.Helper
         #endregion
 
         #region Methods
-        public EmployeeHelper(Employee salaryEmployee, Employee commisionEmployee, Employee contractorEmployee, Employee baseCommissionEmployee)
+        public EmployeeHelper(Employee salaryEmployee, Employee commissionEmployee, Employee contractorEmployee, Employee baseCommissionEmployee)
         {
             _salaryEmployee = salaryEmployee;
-            _commissionEmployee = commisionEmployee;
+            _commissionEmployee = commissionEmployee;
             _contractorEmployee = contractorEmployee;  
             _baseCommissionEmployee = baseCommissionEmployee;
         }

@@ -11,7 +11,7 @@ namespace MyFirstCodeOOP
         {
             try
             {
-                //Date dateObject = new Date(2023, 2, 29);
+                Date dateObject = new Date(2023, 2, 29);
                 Console.WriteLine("****************");
                 Console.WriteLine("* OOP CONCEPTS *");
                 Console.WriteLine("****************");
@@ -67,8 +67,6 @@ namespace MyFirstCodeOOP
                 Console.WriteLine("* COMMISSION EMPLOYEE *");
                 Console.WriteLine("***********************");
 
-                CommissionEmployee commissionEmployee = new CommissionEmployee();
-
                 Console.WriteLine("Type your ID");
                 id = Convert.ToInt32(Console.ReadLine());
 
@@ -88,7 +86,7 @@ namespace MyFirstCodeOOP
                 Console.WriteLine("Enter your sales:");
                 decimal sales = Convert.ToDecimal(Console.ReadLine());
 
-                Employee commissionEmployee1 = new CommissionEmployee()
+                Employee commissionEmployee = new CommissionEmployee()
                 {
                     Id = id,
                     FirstName = firstName,
@@ -100,7 +98,7 @@ namespace MyFirstCodeOOP
                     Sales = sales,
                 };
 
-                //Console.WriteLine(commissionEmployee1);
+                //Console.WriteLine(commissionEmployee);
                 Console.WriteLine(" ");
 
                 Console.WriteLine("************************");
@@ -125,7 +123,7 @@ namespace MyFirstCodeOOP
                 float hours = Convert.ToSingle(Console.ReadLine());
 
 
-                Console.WriteLine("Enter your sales:");
+                Console.WriteLine("Enter your value per hour:");
                 decimal hourValue = Convert.ToDecimal(Console.ReadLine());
 
                 Employee contractorEmployee = new ContractorEmployee()
@@ -185,8 +183,22 @@ namespace MyFirstCodeOOP
 
                 //Console.WriteLine(baseComissionEmployee);
 
-                EmployeeHelper employeeHelper = new EmployeeHelper(salaryEmployee, commissionEmployee, contractorEmployee,baseComissionEmployee);
+                EmployeeHelper employeeHelper = new EmployeeHelper(salaryEmployee, commissionEmployee, contractorEmployee, baseComissionEmployee);
                 Console.WriteLine($"Total payroll:........{employeeHelper.GetPayrollFromActiveEmployees():C2}");
+
+                Console.WriteLine("***********");
+                Console.WriteLine("* INVOICE *");
+                Console.WriteLine("***********");
+
+                Invoice invoice = new Invoice()
+                {
+                    Id = 200123,
+                    Description = "Iphone 13",
+                    Price = 4500000,
+                    Quantity = 2,
+                };
+
+                Console.WriteLine(invoice);
 
             }
             catch (Exception ex)

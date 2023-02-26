@@ -1,11 +1,12 @@
-﻿using System;
+﻿using MyFirstCodeOOP.Interface;
+using System;
 using System.Collections.Generic;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
 namespace MyFirstCodeOOP
 {
-    public abstract class Employee
+    public abstract class Employee : IPay
     {
         #region Properties
         public int Id { get; set; }
